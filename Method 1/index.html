@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .counter{
+            margin: 0 auto;
+            width: 300px;
+            height: 170px;
+            border: 1px solid #ddd;
+            background: #2b292969;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .counter h1{
+            margin: 5px 0;
+        }
+        .counter-display{
+            font-size: 35px;
+            margin: 10px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .counter-btn-group{
+            padding-top: 20px;
+
+        }
+        .counter-btn{
+            padding: 4px 12px;
+            margin: 0 5px;
+            border: 3px solid #ddd;
+            border-radius: 10px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="counter">
+        <h1>Counter</h1>
+        <div class="counter-display">0</div>
+        <div class="counter-btn-group">
+            <button class="counter-btn decrease">Decrease</button>
+            <button class="counter-btn reset">Reset</button>
+            <button class="counter-btn increase">Increase</button>
+        </div>
+    </div>
+
+    <script>
+        let display = document.querySelector('.counter-display');
+        let increase = document.querySelector('.increase');
+        let reset = document.querySelector('.reset');
+        let decrease = document.querySelector('.decrease');
+        var disValue = 0;
+
+
+
+
+        increase.addEventListener('click',function (){
+            disValue += 1
+            display.innerHTML = disValue;
+            
+        });
+
+        reset.addEventListener('click',function (){
+            disValue = 0;
+            display.innerHTML = disValue;
+            
+        });
+
+        decrease.addEventListener('click',function (){
+            disValue -= 1
+            display.innerHTML = disValue;
+            
+        });
+
+
+    </script>
+</body>
+</html>
